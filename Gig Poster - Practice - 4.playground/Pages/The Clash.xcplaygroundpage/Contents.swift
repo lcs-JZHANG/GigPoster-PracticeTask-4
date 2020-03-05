@@ -33,6 +33,52 @@ let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your work below...
 
+canvas.fillColor = orange
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+// Text
+canvas.drawText(message: "the clash", at: Point(x: 20, y: 80), size: 48)
+canvas.drawText(message: "with the brattles", at: Point(x: 20, y: 35), size: 8)
+canvas.drawText(message: "and dead kennedys", at: Point(x: 20, y: 25), size: 8)
+canvas.drawText(message: "matinee anc eve", at: Point(x: 105, y: 35), size: 8)
+canvas.drawText(message: "saturday / june 13 1981", at: Point(x: 105, y: 25), size: 8)
+canvas.drawText(message: "bonds international casino", at: Point(x: 260, y: 35), size: 8)
+canvas.drawText(message: "in times square, new york city", at: Point(x: 260, y: 25), size: 8)
+
+
+// white squares
+canvas.drawShapesWithFill = false
+canvas.borderColor = offWhite
+canvas.translate(to: Point(x: 230, y: 168))
+canvas.rotate(by: 45)
+
+for k in 0...6 {
+    if  k == 6 {
+        canvas.drawShapesWithFill = true
+        canvas.fillColor = offWhite
+    }
+canvas.drawRectangle(at: Point(x: 24*k, y: 24*k), width: 300-48*k, height: 300-48*k, borderWidth: 12)
+    
+ 
+}
+
+
+// Blue Squares
+canvas.translate(to: Point(x: -42, y: 42))
+canvas.drawShapesWithFill = false
+canvas.borderColor = blue
+for h in 0...6 {
+    
+    if  h == 6 {
+        canvas.drawShapesWithFill = true
+        canvas.fillColor = blue
+    }
+canvas.drawRectangle(at: Point(x: 24*h, y: 24*h), width: 300-48*h, height: 300-48*h, borderWidth: 12)
+
+    
+ 
+}
+
 
 /*:
  ## Use Source Control
